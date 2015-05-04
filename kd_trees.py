@@ -1,10 +1,3 @@
-#This is my implementation of K-d Trees as described in the original paper by Bently
-#Daniel S. Hono II - 2014/5/14 
-#Univeristy at Albany, SUNY 
-
-#A classwrapper for a kd-Tree. 
-#Contains root object, an instance of the kdNode class.  
-#Contains functions for inserting a node into the K-d tree 
 class kdTree:
     def __init__(self, dim):
         self.root = None; #Start the tree empty 
@@ -12,9 +5,9 @@ class kdTree:
 
     #Create a new kdNode instances and return it. 
     def newNode(self, d, v):
-        tmp = kdNode(None, None, d);
-        tmp.kList = v;
-        return tmp;
+        tempNode = kdNode(None, None, d);
+        tempNode.kList = v;
+        return tempNode;
 
     #Insert a node in the tree using Bently's algorithm. 
     def kdInsert(self, node, point, i):
